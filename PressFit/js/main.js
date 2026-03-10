@@ -1,4 +1,4 @@
-document.querySelector('#yell').addEventListener('click', run)
+document.querySelector('#title').addEventListener('click', run)
 
 function run() {
   const pinOD = document.querySelector('#pinOD').value
@@ -12,5 +12,5 @@ function run() {
 
   //Add what you should be doing - conditionals go here
 
-  document.querySelector('#placeToYell').innerText = `${fName} ${fMidName} ${lMidName} ${lName}`
+  document.querySelector('#hoopStressOutput').innerText = `Pin OD is: ${pinOD}`
 }
