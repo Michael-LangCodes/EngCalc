@@ -3,26 +3,26 @@ h1{
     justify-content: center;
 }
 
-/* Form Input Styling*/
+/*Form Styling*/
 .form-group {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-ul {
-    list-style-type: none;
-}
-
-li{
-    padding: 0.5rem 0;
+  flex-direction: column;
+  margin-bottom: 16px;
 }
 
 label {
-  width: 150px;
+  margin-bottom: 6px;
+  font-weight: 600;
 }
 
 input {
-  flex: 1;
-  padding: 6px;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4a90e2;
 }
