@@ -27,7 +27,13 @@
 
         <div class="form-group">
             <label for="pinMat">Pin Material</label>
-            <input id="pinMat" type="text">
+            <select name="pinMat" id="pinMat">
+            <option value="none" selected disabled hidden>Choose Material</option>
+            <option value="steel">Steel</option>
+            <option value="aluminum">Aluminum</option>
+            <option value="plastic">Plastic</option>
+            </select>
+            <!--<input id="pinMat" type="text">-->
         </div>
         
         <div class="form-group">
@@ -47,7 +53,12 @@
 
         <div class="form-group">
             <label for="holeMat">Hole Material</label>
-            <input id="holeMat" type="text">
+            <select name="holeMat" id="holeMat">
+            <option value="none" selected disabled hidden>Choose Material</option>
+            <option value="steel">Steel</option>
+            <option value="aluminum">Aluminum</option>
+            <option value="plastic">Plastic</option>
+            </select>
         </div>
         </div>
         <button type="button" class="button">Submit</button>
