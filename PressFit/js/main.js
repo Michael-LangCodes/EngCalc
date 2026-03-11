@@ -1,4 +1,4 @@
-document.querySelector('#title').addEventListener('click', run)
+document.querySelector('.button').addEventListener('click', run)
 
 function run() {
   const pinOD = document.querySelector('#pinOD').value
