@@ -1,12 +1,14 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
+const parameters = require("/parameters");
+
 
 app.use(cors()); // Enables CORS for all origins and all routes
 
-import { calcHoopStress } from "./parameters.js";
+//import { calcHoopStress } from "./parameters.js";
 
-document.querySelector('.button').addEventListener('click', calcHoopStress)
+document.querySelector('.button').addEventListener('click', parameters.calcHoopStress)
 
 // const hubStiffness = 200
 // const hubPois = 0.3
