@@ -1,10 +1,4 @@
-const express = require('express');
-const cors = require('cors');
-const app = express();
 const parameters = require("/parameters");
-
-
-app.use(cors()); // Enables CORS for all origins and all routes
 
 //import { calcHoopStress } from "./parameters.js";
 
