@@ -1,4 +1,4 @@
-function calcHoopStress() {
+export function calcHoopStress() {
   const hubStiffness = 200
     const hubPois = 0.3
     const pinStiffness = 200
@@ -19,9 +19,4 @@ function calcHoopStress() {
   const hubHoopStress = pressure*(((hubOD/2)**2 + (hubID/2)**2)/((hubOD/2)**2 - (hubID/2)**2));
   const pinHoopStress = pressure*(((pinOD/2)**2 + (pinID/2)**2)/((pinOD/2)**2 - (pinID/2)**2));
   document.querySelector('#hoopStressOutput').innerText = `Hub Hoop Stress: ${hubHoopStress}`
-  //return pressure
-}
-
-module.exports = {
-    calcHoopStress
 }

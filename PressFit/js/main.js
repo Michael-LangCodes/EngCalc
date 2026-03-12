@@ -1,4 +1,10 @@
-const calcHoopStress = require('parameters')
+const express = require('express');
+const cors = require('cors');
+const app = express();
+
+app.use(cors()); // Enables CORS for all origins and all routes
+
+import { calcHoopStress } from "./parameters.js";
 
 document.querySelector('.button').addEventListener('click', calcHoopStress)
 
@@ -6,8 +12,6 @@ document.querySelector('.button').addEventListener('click', calcHoopStress)
 // const hubPois = 0.3
 // const pinStiffness = 200
 // const pinPois = 0.3
-
-comments
 
 // function calcHoopStress() {
 //   const pinOD = document.querySelector('#pinOD').value
