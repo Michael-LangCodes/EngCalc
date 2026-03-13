@@ -2,12 +2,16 @@ import {drawStress} from "./draw.js"
 
 import { getInputs } from "./ui/inputs.js"
 
-import { hubHoopStress } from "./calculations/stress.js"
+import { hubHoopStress, pinHoopStress } from "./calculations/stress.js"
 
-document.querySelector('.button').addEventListener('click', getInputs)
-console.log(getInputs())
-document.querySelector('.button').addEventListener('click', getInputs)
-console.log(getInputs().hubStiffness)
+document.querySelector('.button').addEventListener('click', ()=>{
+  const inputs = getInputs();        // grab values from the form
+  console.log(getInputs())
+  const hubStress = hubHoopStress(inputs); // run calculations
+  const pinStress = pinHoopStress(inputs);
+  console.log({ hubStress, pinStress });
+  document.querySelector('#hoopStressOutput').innerText = `Hub Hoop Stress: ${hubStress}`
+})
 
 // const hubStiffness = 200
 // const hubPois = 0.3

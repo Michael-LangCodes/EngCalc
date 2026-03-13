@@ -1,34 +1,37 @@
-
-export function interfere(pinOD, hubID){
-    return (pinOD/2) - (hubID/2)
+export function interfere(inputs){
+    return (inputs.pinOD / 2) - (inputs.hubID / 2);
 }
 
-export function hubDeflect(hubID,hubStiffness,hubOD,hubPois){
-    return ((hubID/2)/hubStiffness)*((((hubOD/2)**2 + (hubID/2)**2)/((hubOD/2)**2 - (hubID/2)**2))+hubPois);
+export function hubDeflect(inputs){
+    return ((inputs.hubID / 2) / inputs.hubStiffness) *
+           ((((inputs.hubOD / 2) ** 2 + (inputs.hubID / 2) ** 2) / ((inputs.hubOD / 2) ** 2 - (inputs.hubID / 2) ** 2)) + inputs.hubPois);
 }
 
-export function pinDeflect(pinID,pinStiffness,pinOD,pinPois){
-    return ((pinOD/2)/pinStiffness)*((((pinOD/2)**2 + (pinID/2)**2)/((pinOD/2)**2 - (pinID/2)**2))+pinPois);
+export function pinDeflect(inputs){
+    return ((inputs.pinOD / 2) / inputs.pinStiffness) *
+           ((((inputs.pinOD / 2) ** 2 + (inputs.pinID / 2) ** 2) / ((inputs.pinOD / 2) ** 2 - (inputs.pinID / 2) ** 2)) + inputs.pinPois);
 }
 
-export function pressure(hubID,hubStiffness,hubOD,hubPois,pinID,pinStiffness,pinOD,pinPois){
-    //Caclulate the interference
-    interfere = interfere(pinOD,hubID);
-    //Calculate hub ID deflection from press
-    hubDeflect = hubDeflect(hubID,hubStiffness,hubOD,hubPois);
-    //Calculate pin OD deflection from press
-    pinDeflect = pinDeflect(pinID,pinStiffness,pinOD,pinPois);
-    return interfere/(hubDeflect+pinDeflect)
+// Calculate pressure
+export function calcPressure(inputs) {
+    const inter = interfere(inputs);
+    const hubDef = hubDeflect(inputs);
+    const pinDef = pinDeflect(inputs);
+
+    return inter / (hubDef + pinDef);
 }
 
-export function hubHoopStress(hubID,hubStiffness,hubOD,hubPois,pinID,pinStiffness,pinOD,pinPois){
-    pressure = pressure(hubID,hubStiffness,hubOD,hubPois,pinID,pinStiffness,pinOD,pinPois);
-    return pressure*(((hubOD/2)**2 + (hubID/2)**2)/((hubOD/2)**2 - (hubID/2)**2))
+// Calculate hoop stresses
+export function hubHoopStress(inputs) {
+    const p = calcPressure(inputs);
+    return p * (((inputs.hubOD / 2) ** 2 + (inputs.hubID / 2) ** 2) /
+                ((inputs.hubOD / 2) ** 2 - (inputs.hubID / 2) ** 2));
 }
 
-export function pinHoopStress(){
-    pressure = pressure(hubID,hubStiffness,hubOD,hubPois,pinID,pinStiffness,pinOD,pinPois);
-    return pressure*(((pinOD/2)**2 + (pinID/2)**2)/((pinOD/2)**2 - (pinID/2)**2))
+export function pinHoopStress(inputs) {
+    const p = calcPressure(inputs);
+    return p * (((inputs.pinOD / 2) ** 2 + (inputs.pinID / 2) ** 2) /
+                ((inputs.pinOD / 2) ** 2 - (inputs.pinID / 2) ** 2));
 }
 
 // export function shaftStress(r, pressure, shaftRadius){
