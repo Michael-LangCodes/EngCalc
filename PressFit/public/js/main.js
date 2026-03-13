@@ -1,8 +1,8 @@
 import {drawStress} from "./draw.js"
 
-import { heatColor } from "./heatmap.js";
+import { calcHoopStress } from "./calculations/stress.js"
 
-document.querySelector('.button').addEventListener('click', drawStress)
+document.querySelector('.button').addEventListener('click', calcHoopStress)
 console.log(hubStiffness)
 
 // const hubStiffness = 200
