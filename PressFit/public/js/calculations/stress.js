@@ -1,3 +1,7 @@
+export function interfere(pinOD, hubID){
+    return (pinOD/2) - (hubID/2)
+}
+
 export function shaftStress(r, pressure, shaftRadius){
     return pressure * (r / shaftRadius)
 }
