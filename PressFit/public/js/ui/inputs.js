@@ -1,4 +1,4 @@
-function getInputs(){
+export function getInputs(){
   return {
     pinOD: Number(document.querySelector('#pinOD').value),
     pinID: Number(document.querySelector('#pinID').value),

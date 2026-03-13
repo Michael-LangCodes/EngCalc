@@ -1,4 +1,4 @@
-import {shaftStress, hubStress} from "./stress.js"
+import {pinHoopStress, hubHoopStress} from "./calculations/stress.js"
 import {heatColor} from "./heatmap.js"
 
 export function drawStress(ctx, params){

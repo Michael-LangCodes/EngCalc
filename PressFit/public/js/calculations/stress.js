@@ -26,7 +26,7 @@ export function hubHoopStress(hubID,hubStiffness,hubOD,hubPois,pinID,pinStiffnes
     return pressure*(((hubOD/2)**2 + (hubID/2)**2)/((hubOD/2)**2 - (hubID/2)**2))
 }
 
-export function pinHoopStres(){
+export function pinHoopStress(){
     pressure = pressure(hubID,hubStiffness,hubOD,hubPois,pinID,pinStiffness,pinOD,pinPois);
     return pressure*(((pinOD/2)**2 + (pinID/2)**2)/((pinOD/2)**2 - (pinID/2)**2))
 }

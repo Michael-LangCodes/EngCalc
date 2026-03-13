@@ -1,9 +1,13 @@
 import {drawStress} from "./draw.js"
 
-import { calcHoopStress } from "./calculations/stress.js"
+import { getInputs } from "./ui/inputs.js"
 
-document.querySelector('.button').addEventListener('click', calcHoopStress)
-console.log(hubStiffness)
+import { hubHoopStress } from "./calculations/stress.js"
+
+document.querySelector('.button').addEventListener('click', getInputs)
+console.log(getInputs())
+document.querySelector('.button').addEventListener('click', getInputs)
+console.log(getInputs().hubStiffness)
 
 // const hubStiffness = 200
 // const hubPois = 0.3
