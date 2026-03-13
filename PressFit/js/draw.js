@@ -5,6 +5,8 @@ export function drawStress(ctx, params){
     const resolution = 1;
     const maxStress = interfacePressure;
 
+    console.log('This Live Updates')
+    
     for(let x=0; x<canvas.width; x+=resolution){
 
         for(let y=0; y<canvas.height; y+=resolution){
