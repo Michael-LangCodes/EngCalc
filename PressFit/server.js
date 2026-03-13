@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-// serve static files
+// Static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Route to serve the main index.html file
