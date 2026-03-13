@@ -1,8 +1,8 @@
-const parameters = require("/parameters");
+import {drawStress} from "./draw.js"
 
 //import { calcHoopStress } from "./parameters.js";
 
-document.querySelector('.button').addEventListener('click', parameters.calcHoopStress)
+document.querySelector('.button').addEventListener('click', drawStress)
 
 // const hubStiffness = 200
 // const hubPois = 0.3

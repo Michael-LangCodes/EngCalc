@@ -1,6 +1,7 @@
 module.exports = {
-    calcHoopStress : function(){
-  const hubStiffness = 200
+  hubStiffness: 200,  
+  calcHoopStress : function(){
+  //const hubStiffness = 200
     const hubPois = 0.3
     const pinStiffness = 200
     const pinPois = 0.3
