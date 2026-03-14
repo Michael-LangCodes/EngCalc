@@ -1,4 +1,4 @@
-import Plotly from "https://cdn.plot.ly/plotly-latest.min.js";
+import Plotly from "https://cdn.jsdelivr.net/npm/plotly.js-dist@2.32.0/+esm";
 
 export function drawPlotlyStress(inputs) {
   // Example: simplified 2D grid of radial stress
