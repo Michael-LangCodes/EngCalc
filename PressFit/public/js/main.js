@@ -10,14 +10,18 @@ import { drawPlotlyStress } from "./plots/plotly.js"
 
 import { drawCanvasStress } from "./plots/canvasplot.js"
 
+import { calcAssemblyForce } from "./calculations/pressforce.js"
+
 document.querySelector('.button').addEventListener('click', ()=>{
   const inputs = getInputs();        // grab values from the form
   console.log(getInputs())
   const hubStress = hubHoopStress(inputs); // run calculations
   const pinStress = pinHoopStress(inputs);
+  const pressForce = calcAssemblyForce(inputs);
   const results = { hubStress, pinStress };
   console.log(results);
   document.querySelector('#hoopStressOutput').innerText = `Hub Hoop Stress: ${hubStress}`
+  document.querySelectorAll('#pressForce').innerText = `Press Force: ${pressForce}`
   drawD3Stress(inputs,results);
   //drawPlotlyStress(inputs,results);
   drawCanvasStress(results,inputs);
