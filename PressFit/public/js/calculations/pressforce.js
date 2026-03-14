@@ -1,4 +1,4 @@
-export function calcAssemblyForce(){
-  const friction = 0.2;
-
+export function calcAssemblyForce(imputs){
+    const friction = 0.2;
+    
 }
