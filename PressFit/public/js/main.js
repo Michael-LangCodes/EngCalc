@@ -6,6 +6,8 @@ import { hubHoopStress, pinHoopStress } from "./calculations/stress.js"
 
 import { drawD3Stress } from "./plots/stressplot.js"
 
+import { drawPlotlyStress } from "./plots/plotly.js"
+
 document.querySelector('.button').addEventListener('click', ()=>{
   const inputs = getInputs();        // grab values from the form
   console.log(getInputs())
@@ -15,6 +17,7 @@ document.querySelector('.button').addEventListener('click', ()=>{
   console.log(results);
   document.querySelector('#hoopStressOutput').innerText = `Hub Hoop Stress: ${hubStress}`
   drawD3Stress(inputs,results);
+  drawPlotlyStress(inputs,results)
 })
 
 // const hubStiffness = 200
