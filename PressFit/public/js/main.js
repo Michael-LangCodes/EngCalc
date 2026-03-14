@@ -22,9 +22,3 @@ document.querySelector('.button').addEventListener('click', ()=>{
   //drawPlotlyStress(inputs,results);
   drawCanvasStress(results,inputs);
 })
-
-
-function calcAssemblyForce(){
-  const friction = 0.2;
-
-}
