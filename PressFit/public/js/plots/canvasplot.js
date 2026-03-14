@@ -10,7 +10,7 @@ export function drawCanvasStress(results,inputs) {
   // Simple color mapping function
   function stressToColor(stress) {
     const maxStress = Math.max(results.hubStress, results.pinStress);
-    const intensity = 3;
+    const intensity = 40;
     //const intensity = Math.round((stress / maxStress) * 255);
     return `rgb(${intensity},0,0)`; // red scale
   }

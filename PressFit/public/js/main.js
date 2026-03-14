@@ -6,7 +6,7 @@ import { hubHoopStress, pinHoopStress } from "./calculations/stress.js"
 
 import { drawD3Stress } from "./plots/stressplot.js"
 
-import { drawPlotlyStress } from "./plots/plotly.js"
+//import { drawPlotlyStress } from "./plots/plotly.js"
 
 import { drawCanvasStress } from "./plots/canvasplot.js"
 
