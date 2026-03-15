@@ -2,7 +2,7 @@ import {drawStress} from "./draw.js"
 
 import { getInputs } from "./ui/inputs.js"
 
-import { hubHoopStress, pinHoopStress } from "./calculations/stress.js"
+import { hubHoopStress, pinHoopStress, calcPressure } from "./calculations/stress.js"
 
 import { drawD3Stress } from "./plots/stressplot.js"
 
@@ -18,12 +18,12 @@ document.querySelector('.button').addEventListener('click', ()=>{
   const hubStress = hubHoopStress(inputs); // run calculations
   const pinStress = pinHoopStress(inputs);
   const pressForce = calcAssemblyForce(inputs);
-  const results = { hubStress, pinStress };
+  const pressure = calcPressure(inputs);
+  const results = { hubStress, pinStress, pressForce, pressure };
   console.log(results);
   console.log(pressForce);
   document.querySelector('#hoopStressOutput').innerText = `Hub Hoop Stress: ${hubStress}`;
   document.querySelector('#pressForce').innerText = `Press Force: ${pressForce}`;
   drawD3Stress(inputs,results);
-  //drawPlotlyStress(inputs,results);
   drawCanvasStress(results,inputs);
 })
