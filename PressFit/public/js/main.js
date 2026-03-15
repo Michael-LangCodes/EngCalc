@@ -20,9 +20,9 @@ document.querySelector('.button').addEventListener('click', ()=>{
   const pressForce = calcAssemblyForce(inputs);
   const results = { hubStress, pinStress };
   console.log(results);
-  console.log(pressForce)
-  document.querySelector('#hoopStressOutput').innerText = `Hub Hoop Stress: ${hubStress}`
-  document.querySelectorAll('#pressForce').innerText = `Press Force: ${pressForce}`
+  console.log(pressForce);
+  document.querySelector('#hoopStressOutput').innerText = `Hub Hoop Stress: ${hubStress}`;
+  document.querySelector('#pressForce').innerText = `Press Force: ${pressForce}`;
   drawD3Stress(inputs,results);
   //drawPlotlyStress(inputs,results);
   drawCanvasStress(results,inputs);
