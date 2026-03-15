@@ -1,4 +1,4 @@
-import { calcPressure } from "./stress";
+import { calcPressure } from "./stress.js";
 
 export function calcAssemblyForce(inputs){
     const friction = 0.2;
