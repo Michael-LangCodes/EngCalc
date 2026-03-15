@@ -5,4 +5,5 @@ function displayResults(results) {
     // `Pressure: ${results.hubtress}`;
     document.querySelector("#pressForce").innerText =
     `Pressure: ${results.pressForce}`;
+    
 }

@@ -1,9 +1,9 @@
-//import { interfere } from "/interface.js"
+import { interfere } from "./interface.js"
 
-//Calculate Interference
-export function interfere(inputs){
-    return (inputs.pinOD / 2) - (inputs.hubID / 2);
-}
+// //Calculate Interference
+// export function interfere(inputs){
+//     return (inputs.pinOD / 2) - (inputs.hubID / 2);
+// }
 
 //Calculate Hub Deflection from Press
 export function hubDeflect(inputs){
