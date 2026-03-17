@@ -12,6 +12,8 @@ import { drawCanvasStress } from "./plots/canvasplot.js"
 
 import { calcAssemblyForce } from "./calculations/pressforce.js"
 
+import { calcTorque } from "./calculations/torque.js"
+
 document.querySelector('.button').addEventListener('click', ()=>{
   const inputs = getInputs();        // grab values from the form
   console.log(getInputs())
@@ -19,11 +21,13 @@ document.querySelector('.button').addEventListener('click', ()=>{
   const pinStress = pinHoopStress(inputs);
   const pressForce = calcAssemblyForce(inputs);
   const pressure = calcPressure(inputs);
-  const results = { hubStress, pinStress, pressForce, pressure };
+  const pressTorque = calcTorque(inputs)
+  const results = { hubStress, pinStress, pressForce, pressure, torque };
   console.log(results);
   console.log(pressForce);
   document.querySelector('#hoopStressOutput').innerText = `Hub Hoop Stress: ${hubStress}`;
   document.querySelector('#pressForce').innerText = `Press Force: ${pressForce}`;
+  document.querySelector('#pressForce').innerText = `Press Torque: ${pressTorque}`;
   drawD3Stress(inputs,results);
   drawCanvasStress(results,inputs);
 })
