@@ -14,7 +14,9 @@ import { calcAssemblyForce } from "./calculations/pressforce.js"
 
 import { calcTorque } from "./calculations/torque.js"
 
-import { aluminum } from "./materials/getMaterial.js"
+import { aluminumData } from "./materials/getMaterial.js"
+
+import { materialData } from "./materials/selectMaterial.js"
 
 document.querySelector('.button').addEventListener('click', ()=>{
   const inputs = getInputs();        // grab values from the form
@@ -24,7 +26,9 @@ document.querySelector('.button').addEventListener('click', ()=>{
   const pressForce = calcAssemblyForce(inputs);
   const pressure = calcPressure(inputs);
   const pressTorque = calcTorque(inputs);
-  aluminum();
+  console.log('this is the aluminum data to follow')
+  aluminumData();
+  //materialData('pinMat');
   const results = { hubStress, pinStress, pressForce, pressure, pressTorque };
   console.log(results);
   console.log(pressForce);

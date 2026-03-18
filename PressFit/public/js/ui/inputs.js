@@ -1,9 +1,11 @@
+import { materialData } from "../materials/selectMaterial.js";
+
 export function getInputs() {
   // Grab values from HTML inputs and convert to numbers
   const hubID = Number(document.querySelector("#hubID").value);
   const hubOD = Number(document.querySelector("#hubOD").value);
   const hubLength = Number(document.querySelector("#hubLength").value);
-  const hubStiffness = 200//Number(document.querySelector("#hubStiffness").value);
+  const hubStiffness =  200 //Number(materialData('#hubMat')).stiffness
   const hubPois = 0.3//Number(document.querySelector("#hubPois").value);
 
   const pinID = Number(document.querySelector("#pinID").value);
