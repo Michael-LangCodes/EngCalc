@@ -26,8 +26,8 @@ document.querySelector('.button').addEventListener('click', ()=>{
   const pressForce = calcAssemblyForce(inputs);
   const pressure = calcPressure(inputs);
   const pressTorque = calcTorque(inputs);
-  console.log('this is the material data to follow')
   materialData('pinMat');
+  materialData('hubMat')
   //materialData('pinMat');
   const results = { hubStress, pinStress, pressForce, pressure, pressTorque };
   //console.log(results);
