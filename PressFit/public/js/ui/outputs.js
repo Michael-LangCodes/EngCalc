@@ -1,9 +1,6 @@
-function displayResults(results) {
-    document.querySelector("#hoopStressOutput").innerText =
-    `Pressure: ${results.hubtress}`;
-    // document.querySelector("#hoopStressOutput").innerText =
-    // `Pressure: ${results.hubtress}`;
-    document.querySelector("#pressForce").innerText =
-    `Pressure: ${results.pressForce}`;
-    
+export function displayResults(results) {
+    document.querySelector('#hoopStressOutput').innerText = `Hub Hoop Stress: ${results.hubStress}`;
+    document.querySelector('#pressForce').innerText = `Press Force: ${results.pressForce}`;
+    document.querySelector('#pressTorque').innerText = `Press Torque: ${results.pressTorque}`;
+
 }
