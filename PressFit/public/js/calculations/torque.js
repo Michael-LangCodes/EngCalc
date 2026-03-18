@@ -1,4 +1,4 @@
-import { calcAssemblyForce } from "./pressforce";
+import { calcAssemblyForce } from "./pressforce.js";
 
 export function calcTorque(inputs){
     const pressForce = calcAssemblyForce(inputs);
