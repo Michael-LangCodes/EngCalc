@@ -22,12 +22,12 @@ document.querySelector('.button').addEventListener('click', ()=>{
   const pressForce = calcAssemblyForce(inputs);
   const pressure = calcPressure(inputs);
   const pressTorque = calcTorque(inputs)
-  const results = { hubStress, pinStress, pressForce, pressure, torque };
+  const results = { hubStress, pinStress, pressForce, pressure, pressTorque };
   console.log(results);
   console.log(pressForce);
   document.querySelector('#hoopStressOutput').innerText = `Hub Hoop Stress: ${hubStress}`;
   document.querySelector('#pressForce').innerText = `Press Force: ${pressForce}`;
-  document.querySelector('#pressForce').innerText = `Press Torque: ${pressTorque}`;
+  document.querySelector('#pressTorque').innerText = `Press Torque: ${pressTorque}`;
   drawD3Stress(inputs,results);
   drawCanvasStress(results,inputs);
 })
