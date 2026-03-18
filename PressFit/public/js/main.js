@@ -26,12 +26,12 @@ document.querySelector('.button').addEventListener('click', ()=>{
   const pressForce = calcAssemblyForce(inputs);
   const pressure = calcPressure(inputs);
   const pressTorque = calcTorque(inputs);
-  console.log('this is the aluminum data to follow')
-  aluminumData();
+  console.log('this is the material data to follow')
+  materialData('pinMat');
   //materialData('pinMat');
   const results = { hubStress, pinStress, pressForce, pressure, pressTorque };
-  console.log(results);
-  console.log(pressForce);
+  //console.log(results);
+  //console.log(pressForce);
   document.querySelector('#hoopStressOutput').innerText = `Hub Hoop Stress: ${hubStress}`;
   document.querySelector('#pressForce').innerText = `Press Force: ${pressForce}`;
   document.querySelector('#pressTorque').innerText = `Press Torque: ${pressTorque}`;

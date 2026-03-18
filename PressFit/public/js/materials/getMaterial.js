@@ -10,13 +10,13 @@ export async function aluminumData() {
     }
     const jsonData = await response.json(); // Parse the response as JSON
     console.log(jsonData.aluminum); // Use the data (it's a JS object)
-    console.log(jsonData.YoungModulus)
+    console.log(jsonData.aluminum.YoungModulus)
     let stiffness = jsonData.YoungModulus;
     let pois = jsonData.PoissonRation;
-    // return {
-    //     stiffness,
-    //     pois
-    // }
+    return {
+         stiffness,
+         pois
+    }
   } catch (error) {
     console.error('Error fetching JSON:', error);
   }
