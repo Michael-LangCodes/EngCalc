@@ -7,8 +7,6 @@ export function matSelectColor(id, button){
 
     // On submit click
     button.addEventListener("click", () => {
-        console.log('I have seen this click inside MatColor')
-        console.log(select.value)
         if (select.value === "none") {
             select.classList.add("matError");
             select.classList.remove("matNormal");
@@ -20,7 +18,6 @@ export function matSelectColor(id, button){
 
     // On change
     select.addEventListener("change", () => {
-        console.log('I have seen this change inside MatColor')
         if (select.value !== "none") {
             select.classList.remove("matError");
             select.classList.add("matNormal");

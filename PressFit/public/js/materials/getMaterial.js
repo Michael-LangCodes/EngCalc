@@ -8,10 +8,8 @@ export async function noneData() {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
     const jsonData = await response.json(); // Parse the response as JSON
-    console.log(jsonData.none); // Use the data (it's a JS object)
-    console.log(jsonData.none.YoungModulus)
-    let stiffness = jsonData.YoungModulus;
-    let pois = jsonData.PoissonRation;
+    let stiffness = jsonData.YoungModulus; //Grab stiffness from material database
+    let pois = jsonData.PoissonRation;  //Grab poisson ration from material database
     return {
          stiffness,
          pois
@@ -20,7 +18,6 @@ export async function noneData() {
     console.error('Error fetching JSON:', error);
   }
 }
-
 
 /**
  * Aluminum Material Import
