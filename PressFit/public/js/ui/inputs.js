@@ -5,14 +5,16 @@ export function getInputs() {
   const hubID = Number(document.querySelector("#hubID").value);
   const hubOD = Number(document.querySelector("#hubOD").value);
   const hubLength = Number(document.querySelector("#hubLength").value);
-  const hubStiffness =  Number(materialData('hubMat')).stiffness
-  const hubPois = Number(materialData('hubMat')).pois
+  const hubMat = materialData('hubMat')
+  const hubStiffness =  hubMat.stiffness;
+  const hubPois = hubMat.pois;
 
   const pinID = Number(document.querySelector("#pinID").value);
   const pinOD = Number(document.querySelector("#pinOD").value);
   const pinLength = Number(document.querySelector("#pinLength").value);
-  const pinStiffness = 200//Number(document.querySelector("#pinStiffness").value);
-  const pinPois = 0.3//Number(document.querySelector("#pinPois").value);
+  const pinMat = materialData('pinMat');
+  const pinStiffness = pinMat.stiffness;
+  const pinPois = pinMat.pois;
 
   // Return all values as a single object
   return {

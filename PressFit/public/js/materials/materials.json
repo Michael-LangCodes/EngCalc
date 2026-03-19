@@ -1,4 +1,8 @@
 {
+    "none":{
+        "YoungModulus": null,
+        "PoissonRatio": null
+    },
     "aluminum": {
         "YoungModulus": 300,
         "PoissonRatio": 0.3
