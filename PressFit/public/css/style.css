@@ -33,3 +33,11 @@ input:focus {
   outline: none;
   border-color: #4a90e2;
 }
+
+.matError {
+  background-color: red;
+}
+
+.matNormal {
+  background-color: white;
+}

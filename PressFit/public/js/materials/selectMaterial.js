@@ -6,7 +6,7 @@ export function materialData(location){
 
     if (material === 'none'){
         console.log(`This is the test to check #${location}`);
-        el.style.backgroundColor = "red";
+        //el.style.backgroundColor = "red";
     } else if (material === 'aluminum'){
         return aluminumData();
     }
