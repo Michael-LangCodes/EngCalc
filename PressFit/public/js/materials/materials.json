@@ -10,5 +10,9 @@
     "steel": {
         "YoungModulus": 300,
         "PoissonRatio": 0.3
+    },
+    "plastic": {
+        "YoungModulus": 300,
+        "PoissonRatio": 0.3
     }
 }
